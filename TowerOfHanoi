@@ -1,0 +1,29 @@
+// Rangganatha Siregar and Elaine Hsu
+// 25/May/2022
+// CS &145
+// Lab 5
+// The purpose of this program is to solve the tower of hanoi puzzle
+
+import java.util.*;
+import java.io.*;
+import java.math.*;
+class GFG
+{
+static void RSEHTowerOfHanoi(int tower, char tower2,char tower3, char tower4)
+{
+	if (tower == 0)
+	{
+		return;
+	}
+	RSEHTowerOfHanoi(tower - 1, tower2, tower4, tower3);
+	System.out.println(" Move " + tower + " tower2 " + tower2 +" tower3 " + tower3 );
+	RSEHTowerOfHanoi(tower - 1, tower4, tower3, tower2);
+}
+public static void main(String args[])
+{
+	int tower = 4; 
+	RSEHTowerOfHanoi(tower, 'A', 'C', 'B'); // A, B and C are names of rods
+}
+}
+
+
